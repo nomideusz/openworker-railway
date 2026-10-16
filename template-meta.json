@@ -6,5 +6,6 @@
   "image": "https://raw.githubusercontent.com/nomideusz/openworker-railway/main/icon.png",
   "card_desc": "OpenWorker: the open-source AI coworker (andrewyng/openworker), running 24/7 on Railway as a password-protected web app. Bring any model key, connect GitHub, Slack, Notion and 25+ tools, and get finished work with approvals and an audit trail.",
   "deploy_marker": "openworker-server",
-  "id": "8794840e-d733-4eff-a927-107957e8358b"
+  "id": "8794840e-d733-4eff-a927-107957e8358b",
+  "published": true
 }
