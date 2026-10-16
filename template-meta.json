@@ -1,0 +1,9 @@
+{
+  "name": "OpenWorker | Andrew Ng's Open-Source AI Coworker in the Cloud",
+  "short_name": "OpenWorker",
+  "description": "Andrew Ng's open-source AI coworker, always on: web app, any model",
+  "category": "AI/ML",
+  "image": "https://raw.githubusercontent.com/nomideusz/openworker-railway/main/icon.png",
+  "card_desc": "OpenWorker: the open-source AI coworker from Andrew Ng's team, running 24/7 on Railway. Bring any model key, connect GitHub, Slack, Notion and 25+ tools, and let it deliver finished work with approvals and an audit trail.",
+  "deploy_marker": "openworker-server"
+}

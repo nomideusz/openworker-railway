@@ -1,0 +1,32 @@
+{
+	admin off
+	auto_https off
+}
+
+:{$PORT} {
+	root * /srv/gui
+
+	# The web app: password-protected, and index.html carries the API token.
+	@gui file {
+		try_files {path} {path}index.html
+	}
+	handle @gui {
+		basic_auth {
+			{$OPENWORKER_USER} {$OPENWORKER_PASSWORD_HASH}
+		}
+		header /index.html Cache-Control no-store
+		header / Cache-Control no-store
+		templates {
+			mime text/html
+		}
+		file_server
+	}
+
+	# Everything else is the OpenWorker server, which checks the API token itself.
+	# It only trusts localhost origins, so present the request as same-machine.
+	handle {
+		reverse_proxy 127.0.0.1:8765 {
+			header_up Origin http://localhost
+		}
+	}
+}

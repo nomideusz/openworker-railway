@@ -1,0 +1,52 @@
+{
+ "buckets": {},
+ "services": {
+  "4d9da61b-006c-4fa7-b975-d04dcf708a68": {
+   "icon": "https://raw.githubusercontent.com/nomideusz/openworker-railway/main/icon.png",
+   "name": "openworker",
+   "build": {
+    "dockerfilePath": "Dockerfile"
+   },
+   "deploy": {
+    "startCommand": null,
+    "healthcheckPath": "/v1/health",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+   },
+   "source": {
+    "repo": "https://github.com/nomideusz/openworker-railway",
+    "rootDirectory": null
+   },
+   "variables": {
+    "OPENWORKER_PASSWORD": {
+     "defaultValue": "${{secret(24)}}",
+     "isOptional": false,
+     "description": "Password for the web app (username below). The agent can run shell commands in this container, so keep it long."
+    },
+    "OPENWORKER_USER": {
+     "defaultValue": "admin",
+     "isOptional": false,
+     "description": "Username for the web app sign-in."
+    },
+    "PORT": {
+     "defaultValue": "8080",
+     "isOptional": false,
+     "description": "Port of the web gateway behind the Railway domain - leave as is."
+    }
+   },
+   "networking": {
+    "serviceDomains": {
+     "<hasDomain>:8080": {
+      "port": 8080
+     }
+    },
+    "tcpProxies": {}
+   },
+   "volumeMounts": {
+    "3fee3584-6150-4e65-9530-99627961c7da": {
+     "mountPath": "/data"
+    }
+   }
+  }
+ }
+}

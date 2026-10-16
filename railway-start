@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+if [ ${#OPENWORKER_PASSWORD} -lt 12 ]; then echo "OPENWORKER_PASSWORD must be at least 12 characters" >&2; exit 1; fi
+mkdir -p "$HOME" /data/workspace
+export PORT=${PORT:-8080}
+export OPENWORKER_USER=${OPENWORKER_USER:-admin}
+export OPENWORKER_PASSWORD_HASH=$(caddy hash-password --plaintext "$OPENWORKER_PASSWORD")
+# Fresh API token every boot; the gateway hands it to the browser only after the password check.
+export COWORKER_API_TOKEN=$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')
+openworker-server --host 127.0.0.1 --port 8765 --cwd /data/workspace &
+caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
+wait -n
+exit 1
