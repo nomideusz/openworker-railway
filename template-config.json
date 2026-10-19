@@ -2,7 +2,7 @@
  "buckets": {},
  "services": {
   "4d9da61b-006c-4fa7-b975-d04dcf708a68": {
-   "icon": "https://raw.githubusercontent.com/nomideusz/openworker-railway/main/icon.png",
+   "icon": "https://raw.githubusercontent.com/two-workspaces/openworker/main/icon.png",
    "name": "openworker",
    "build": {
     "dockerfilePath": "Dockerfile"
@@ -14,7 +14,7 @@
     "restartPolicyMaxRetries": 10
    },
    "source": {
-    "repo": "https://github.com/nomideusz/openworker-railway",
+    "repo": "https://github.com/two-workspaces/openworker",
     "rootDirectory": null
    },
    "variables": {

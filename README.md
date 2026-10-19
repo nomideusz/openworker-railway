@@ -30,7 +30,7 @@ It's one service with a Railway volume. Sessions, settings, model keys, connecto
 
 - [OpenWorker on GitHub](https://github.com/andrewyng/openworker)
 - [Headless runs and approval modes](https://github.com/andrewyng/openworker/blob/main/docs/headless.md)
-- [Template source on GitHub](https://github.com/nomideusz/openworker-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/openworker)
 
 ### Implementation Details
 
