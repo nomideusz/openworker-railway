@@ -1,6 +1,6 @@
 # Deploy and Host OpenWorker on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/openworker?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=openworker)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/autonomous?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=autonomous)
 
 [OpenWorker](https://github.com/andrewyng/openworker) is an open-source AI coworker. It's MIT-licensed and comes from the `andrewyng` GitHub organization. You give it an outcome, such as a security review of a repo, a report from your CRM, or a reply in a Slack thread. It plans the steps, uses your tools, checks in before anything consequential, and delivers the finished file or message. It works with any model: OpenAI, Anthropic, Gemini, DeepSeek, Qwen, Kimi, Mistral, Grok, OpenRouter and more. It connects to 25+ apps (GitHub, Slack, Jira, Notion, Linear, HubSpot, Gmail, Google Calendar and others) plus any MCP server.
 
