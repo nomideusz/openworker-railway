@@ -9,7 +9,7 @@ RUN npm ci --no-audit --no-fund && npx vite build \
  # The gateway fills in the per-boot API token when it serves index.html (Caddy templates).
  && sed -i 's|</head>|<script>window.__COWORKER_API_TOKEN__="{{env "COWORKER_API_TOKEN"}}";</script></head>|' dist/index.html
 
-FROM caddy:2.10.2 AS caddy
+FROM caddy:2.11.9 AS caddy
 
 FROM python:3.12-slim
 RUN apt-get update && apt-get install -y --no-install-recommends git curl ca-certificates ripgrep openssh-client \
