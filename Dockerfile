@@ -1,4 +1,4 @@
-FROM alpine/git:v2.49.1 AS src
+FROM alpine/git:v2.54.1 AS src
 ARG OPENWORKER_VERSION=v0.3.1
 RUN git clone --depth 1 --branch ${OPENWORKER_VERSION} https://github.com/andrewyng/openworker /src
 
